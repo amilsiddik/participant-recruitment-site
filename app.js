@@ -246,7 +246,7 @@ const translations = {
 const CONFIG = {
   researcherName: "Andi Muhammad Amil Siddik",
   researcherEmail: "andi-muhammad-amil-siddik860@mail.kyutech.jp"
-  registrationFormUrl: "https://docs.google.com/forms/d/e/FORM_ID/viewform"
+  registrationFormUrl: "https://forms.gle/ZDJ3mPbwzC1neqTZ8"
 };
 
 function normalizedLanguage() {
