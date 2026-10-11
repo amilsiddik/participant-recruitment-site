@@ -244,8 +244,8 @@ const translations = {
 };
 
 const CONFIG = {
-  researcherName: "[Researcher name]",
-  researcherEmail: "[Research email]"
+  researcherName: "Andi Muhammad Amil Siddik",
+  researcherEmail: "andi-muhammad-amil-siddik860@mail.kyutech.jp"
 };
 
 function normalizedLanguage() {
