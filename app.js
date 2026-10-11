@@ -71,8 +71,12 @@ const translations = {
     faq4Q: "Do I need special equipment?",
     faq4A: "No. The researcher will provide the recording setup used for this study.",
     participateLabel: "Interested in participating?",
-    participateTitle: "Register for the Study",
+    participateTitle: "Contact the research team",
     participateText: "If you are interested, contact the research team to check eligibility and arrange a study session. The exact room and schedule will be provided after coordination.",
+    registrationLabel: "Participant registration",
+    registrationTitle: "Register your interest",
+    registrationNote: "Registration does not constitute informed consent. The formal consent procedure will be completed separately before participation.",
+    registrationButton: "Register for the Study",
     contactResearcherLabel: "Research contact",
     contactButton: "Contact by email",
     footerStudy: "Multilingual Speech Emotion Study",
@@ -152,8 +156,12 @@ const translations = {
     faq4Q: "特別な機器が必要ですか？",
     faq4A: "いいえ。本研究で使用する録音環境は研究従事者が準備します。",
     participateLabel: "参加を希望されますか？",
-    participateTitle: "参加登録",
+    participateTitle: "研究チームへお問い合わせください",
     participateText: "参加を希望する場合は、参加条件の確認と日程調整のため研究チームへご連絡ください。具体的な部屋と日時は調整後にお知らせします。",
+    registrationLabel: "参加登録",
+    registrationTitle: "参加希望を登録する",
+    registrationNote: "この登録はインフォームド・コンセントへの同意を意味するものではありません。正式な同意手続きは研究参加前に別途行います。",
+    registrationButton: "参加登録フォームを開く",
     contactResearcherLabel: "研究連絡先",
     contactButton: "メールで連絡",
     footerStudy: "多言語音声感情研究",
@@ -233,8 +241,12 @@ const translations = {
     faq4Q: "Apakah saya membutuhkan perangkat khusus?",
     faq4A: "Tidak. Peneliti akan menyediakan pengaturan rekaman yang digunakan dalam penelitian ini.",
     participateLabel: "Tertarik berpartisipasi?",
-    participateTitle: "Daftar sebagai Peserta,
+    participateTitle: "Hubungi tim penelitian",
     participateText: "Jika Anda tertarik, hubungi tim penelitian untuk memeriksa kriteria dan mengatur sesi penelitian. Ruangan dan jadwal spesifik akan diberikan setelah koordinasi.",
+    registrationLabel: "Pendaftaran peserta",
+    registrationTitle: "Daftarkan minat untuk berpartisipasi",
+    registrationNote: "Pendaftaran ini bukan informed consent. Prosedur persetujuan formal akan dilakukan secara terpisah sebelum partisipasi.",
+    registrationButton: "Daftar sebagai Peserta",
     contactResearcherLabel: "Kontak penelitian",
     contactButton: "Hubungi melalui email",
     footerStudy: "Studi Emosi Suara Multibahasa",
@@ -245,7 +257,7 @@ const translations = {
 
 const CONFIG = {
   researcherName: "Andi Muhammad Amil Siddik",
-  researcherEmail: "andi-muhammad-amil-siddik860@mail.kyutech.jp"
+  researcherEmail: "andi-muhammad-amil-siddik860@mail.kyutech.jp",
   registrationFormUrl: "https://forms.gle/ZDJ3mPbwzC1neqTZ8"
 };
 
@@ -278,9 +290,30 @@ function applyLanguage(lang) {
   const name = document.getElementById("contact-name");
   const email = document.getElementById("contact-email");
   const link = document.getElementById("contact-link");
+  const registrationLink = document.getElementById("registration-link");
 
   name.textContent = CONFIG.researcherName;
   email.textContent = CONFIG.researcherEmail;
+
+  if (
+    CONFIG.registrationFormUrl &&
+    /^https?:\/\//i.test(CONFIG.registrationFormUrl) &&
+    !CONFIG.registrationFormUrl.includes("[")
+  ) {
+    registrationLink.href = CONFIG.registrationFormUrl;
+  } else {
+    registrationLink.href = "#";
+    registrationLink.addEventListener("click", (event) => {
+      event.preventDefault();
+      alert(
+        lang === "ja"
+          ? "公開前に app.js の registrationFormUrl に登録フォームのURLを設定してください。"
+          : lang === "id"
+            ? "Isi registrationFormUrl di app.js dengan URL formulir pendaftaran sebelum mempublikasikan situs."
+            : "Set registrationFormUrl in app.js before publishing the site."
+      );
+    });
+  }
 
   if (CONFIG.researcherEmail.includes("@") && !CONFIG.researcherEmail.includes("[")) {
     link.href = `mailto:${CONFIG.researcherEmail}?subject=${encodeURIComponent("Multilingual Speech Study - Participation Inquiry")}`;
