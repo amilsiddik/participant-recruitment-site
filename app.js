@@ -71,7 +71,7 @@ const translations = {
     faq4Q: "Do I need special equipment?",
     faq4A: "No. The researcher will provide the recording setup used for this study.",
     participateLabel: "Interested in participating?",
-    participateTitle: "Contact the research team",
+    participateTitle: "Register for the Study",
     participateText: "If you are interested, contact the research team to check eligibility and arrange a study session. The exact room and schedule will be provided after coordination.",
     contactResearcherLabel: "Research contact",
     contactButton: "Contact by email",
@@ -152,7 +152,7 @@ const translations = {
     faq4Q: "特別な機器が必要ですか？",
     faq4A: "いいえ。本研究で使用する録音環境は研究従事者が準備します。",
     participateLabel: "参加を希望されますか？",
-    participateTitle: "研究チームへお問い合わせください",
+    participateTitle: "参加登録",
     participateText: "参加を希望する場合は、参加条件の確認と日程調整のため研究チームへご連絡ください。具体的な部屋と日時は調整後にお知らせします。",
     contactResearcherLabel: "研究連絡先",
     contactButton: "メールで連絡",
@@ -233,7 +233,7 @@ const translations = {
     faq4Q: "Apakah saya membutuhkan perangkat khusus?",
     faq4A: "Tidak. Peneliti akan menyediakan pengaturan rekaman yang digunakan dalam penelitian ini.",
     participateLabel: "Tertarik berpartisipasi?",
-    participateTitle: "Hubungi tim penelitian",
+    participateTitle: "Daftar sebagai Peserta,
     participateText: "Jika Anda tertarik, hubungi tim penelitian untuk memeriksa kriteria dan mengatur sesi penelitian. Ruangan dan jadwal spesifik akan diberikan setelah koordinasi.",
     contactResearcherLabel: "Kontak penelitian",
     contactButton: "Hubungi melalui email",
@@ -246,6 +246,7 @@ const translations = {
 const CONFIG = {
   researcherName: "Andi Muhammad Amil Siddik",
   researcherEmail: "andi-muhammad-amil-siddik860@mail.kyutech.jp"
+  registrationFormUrl: "https://docs.google.com/forms/d/e/FORM_ID/viewform"
 };
 
 function normalizedLanguage() {
