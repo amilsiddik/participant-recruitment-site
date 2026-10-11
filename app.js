@@ -92,9 +92,9 @@ const translations = {
     faq4A:
       "No. The researcher will provide the recording setup used for this study.",
     participateLabel: "Interested in participating?",
-    participateTitle: "Contact the research team",
+    participateTitle: "Register for the Study",
     participateText:
-      "If you are interested, use the registration form to check eligibility and arrange a study session. The exact room and schedule will be provided after coordination.",
+      "If you are interested in participating, please complete the registration form. The research team will then contact you to confirm eligibility and arrange the study session.",
     registrationLabel: "Participant registration",
     registrationTitle: "Register your interest",
     registrationNote:
@@ -198,9 +198,9 @@ const translations = {
     faq4A:
       "いいえ。本研究で使用する録音環境は研究従事者が準備します。",
     participateLabel: "参加を希望されますか？",
-    participateTitle: "研究チームへお問い合わせください",
+    participateTitle: "参加登録",
     participateText:
-      "参加を希望する場合は、参加登録フォームから必要事項を入力してください。具体的な部屋と日時は調整後にお知らせします。",
+      "参加を希望する場合は、参加登録フォームに必要事項を入力してください。その後、研究チームから参加条件の確認と実施日時の調整についてご連絡します。",
     registrationLabel: "参加登録",
     registrationTitle: "参加希望を登録する",
     registrationNote:
@@ -306,9 +306,9 @@ const translations = {
     faq4A:
       "Tidak. Peneliti akan menyediakan pengaturan rekaman yang digunakan dalam penelitian ini.",
     participateLabel: "Tertarik berpartisipasi?",
-    participateTitle: "Hubungi tim penelitian",
+    participateTitle: "Daftar sebagai Peserta",
     participateText:
-      "Jika Anda tertarik, isi formulir pendaftaran untuk memeriksa kriteria dan mengatur sesi penelitian. Ruangan dan jadwal spesifik akan diberikan setelah koordinasi.",
+      "Jika Anda tertarik untuk berpartisipasi, isi formulir pendaftaran. Tim penelitian kemudian akan menghubungi Anda untuk mengonfirmasi kriteria peserta dan mengatur jadwal sesi penelitian.",
     registrationLabel: "Pendaftaran peserta",
     registrationTitle: "Daftarkan minat untuk berpartisipasi",
     registrationNote:
